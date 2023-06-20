@@ -1,0 +1,15 @@
+Имя                Email            Сообщение
+------------------------------------------------
+dima	dima.new.protasevich92@gmail.com	new+message
+Roma	roma@mail.ru	Hello+world
+Valera	valera@mail.ru	I+am+Valera  
+Roma	dima.new.protasevich92@gmail.com  qwfqw
+
+news	fqw	fqwf  
+Ира	dima.new.protasevich92@gmail.com	Привет+как+дела?  
+Валя	dima.new.protasevich92@gmail.com	как+дела+у+вас?  
+Валя	dima.new.protasevich92@gmail.com	Что+ты+делаешь?  
+Валя	dima.new.protasevich92@gmail.com	как ты Валя?  
+Валодя	val@mail.ru	У валоди все отлично!  
+Валя	dima.new.protasevich92@gmail.com	Что нового у тебя валя?  
+Валя	dima.new.protasevich92@gmail.com	Что же ты не отвечаешь?  
