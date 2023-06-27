@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Программы{% endblock %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'inc-menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <section class="blog-post-area">
+        <h1>Наши курсы</h1>
+        <p>Все программы действуют в течение года.</p>
+        <p>Расписание на дату: {{object_list[0]['date']}}</p>
+        <table>
+            <tr class="head">
+                <th></th>
+                <th>Москва</th>
+                <th>Санкт-Петербург</th>
+                <th>Екатеринбург</th>
+            </tr>
+            {% for cursec in object_list %}
+            <tr>
+                <th class="even">{{cursec['name']}}</th>
+                <td>{{cursec['date']}}<br/>{{cursec['time']}}</td>
+                <td>{{cursec['date']}}<br/>{{cursec['time']}}</td>
+                <td>{{cursec['date']}}<br/>{{cursec['time']}}</td>
+            </tr>
+            {% endfor %}
+            <tr class="even">
+                <th>Алгоритмы и структуры данных на Python</th>
+                <td>Сб, 10 апреля 2021<br/>11:00 - 13:00</td>
+                <td>Сб, 1 мая 2021<br/>11:00 - 13:00</td>
+                <td>Сб, 8 мая 2021<br/>11:00 - 13:00</td>
+            </tr>
+            <tr>
+                <th>Основы Django</th>
+                <td>Сб, 26 июня 2021<br/>11:00 - 14:00</td>
+                <td>Сб, 3 июля 2021<br/>11:00 - 14:00</td>
+                <td>Сб, 10 июля 2021<br/>11:00 - 14:00</td>
+            </tr>
+            <tr class="even">
+                <th>Основы Flask</th>
+                <td>Сб, 28 августа 2021<br/>11:00 - 16:00</td>
+                <td>Сб, 4 сентября 2021<br/>11:00 - 16:00</td>
+                <td>Сб, 11 сентября 2021<br/>11:00 - 16:00</td>
+            </tr>
+        </table>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'inc-menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="contact">
+        <h1>Контакты нашей школы программирования:</h1>
+        <h3>Телефон: {{contact[0]['phone']}}</h3>
+        <h3>Email: {{contact[0]['email']}}</h3>
+        <h3>Адрес: {{contact[0]['address']}}</h3>
+        <h3>Сайт: {{contact[0]['website']}}</h3>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}
