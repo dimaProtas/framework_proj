@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'inc-menu.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="category">
+<form class="category_form" method="post">
+    <h1>Создание категории</h1>
+    <input type="text" name="name" placeholder="Название">
+    <button type="submit">Сохранить и обновить</button>
+</form>
+    <div class="category_list">
+        <h1>Список категорий</h1>
+        {% for category in object_list %}
+        <h3><a class="curses" href="/courses/?id={{category.id}}">{{category.name}}</a> - курсы ({{category.course_count()}})</h3>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

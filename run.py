@@ -6,5 +6,7 @@ from urls import fronts, routes
 application = Aplication(routes, fronts)
 
 with make_server('', 8000, application) as httpd:
-    print("Server started on port 8000.")
+    server_address = 'http://127.0.0.1:8000'
+    print(f"Server started on address {server_address}.")
+
     httpd.serve_forever()

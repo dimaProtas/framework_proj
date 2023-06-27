@@ -20,13 +20,19 @@ class Aplication:
             view = self.routes[path]
         else:
             view = NotFoundPage()
+
         request = {}
+        method = environ['REQUEST_METHOD']
+        request['method'] = method
+
+        if method == 'POST':
+            request['data'] = process_form_data(environ)
+
+        elif method == 'GET':
+            request['request_params'] = process_get_data(environ)
+
         for front in self.fronts:
             front(request)
-        if environ['REQUEST_METHOD'] == 'POST':
-            process_form_data(environ)
-        elif environ['REQUEST_METHOD'] == 'GET':
-            process_get_data(environ)
         code, body = view(request)
         start_response(code, [('Content-Type', 'text/html')])
         return [body.encode('utf-8')]

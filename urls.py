@@ -1,11 +1,14 @@
-from view import Index, abc_view, Obout, Contact, Programs
+from view import Index, Obout, Contact, Programs, Category, Courses, CopyCourses, Users
 
 routes = {
     '/': Index(),
-    '/abc/': abc_view,
     '/obout/': Obout(),
     '/contact/': Contact(),
     '/programs/': Programs(),
+    '/category/': Category(),
+    '/courses/': Courses(),
+    '/copy-course/': CopyCourses(),
+    '/users/': Users(),
 }
 
 

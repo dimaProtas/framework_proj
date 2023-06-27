@@ -23,6 +23,7 @@ def process_get_data(environ):
     #                 '-----------------------------------------\n')
     #     f.write(str(query_data) + '\n')
     print('Received GET data:', decoded_data)
+    return decoded_data
 
 
 def process_form_data(environ):
@@ -35,9 +36,10 @@ def process_form_data(environ):
         if f.tell() == 0:
             f.write('Имя                Email            Сообщение\n'
                     '------------------------------------------------\n')
-        f.write(f'{result["name"]}\t{result["email"]}\t{result["message"]}  \n')
+        f.write(f'{result} \n')
     # Разбор данных из формы и вывод в терминал
     print('Received form data:', result)
+    return result
 
 
 def decode_value(data):

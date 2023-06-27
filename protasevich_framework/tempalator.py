@@ -1,19 +1,15 @@
-from jinja2 import Template
-from os.path import join
+from jinja2 import Environment, FileSystemLoader
 
 
 def render(template_name, folder='template', **kwargs):
+    file_loader = FileSystemLoader(folder)
+    env = Environment(loader=file_loader)
 
-    file_path = join(folder, template_name)
-
-    with open(file_path, encoding='utf-8') as f:
-
-        template = Template(f.read())
-
+    template = env.get_template(template_name)
     return template.render(**kwargs)
 
 
 #тест шаблонизатора
 if __name__ == '__main__':
-    output_test = render('authors.html', object_list=[{'name': 'Valera'}, {'name': 'Roma'}])
+    output_test = render('courses.html', object_list=[{'name': 'Valera'}, {'name': 'Roma'}])
     print(output_test)
