@@ -36,3 +36,26 @@ class Aplication:
         code, body = view(request)
         start_response(code, [('Content-Type', 'text/html')])
         return [body.encode('utf-8')]
+
+
+# FakeAplication - фейковый фреймворк, на каждой странице выводит сообщение Fake aplication
+class FakeAplication(Aplication):
+    def __init__(self, routes, fronts):
+        self.aplication = Aplication(routes, fronts)
+        super().__init__(routes, fronts)
+
+    def __call__(self, environ, start_response):
+        start_response('200 OK', [('Content-Type', 'text/html')])
+        return [b'Fake aplication']
+
+
+# DebugAplication - логирующий фреймвор наследуется от основного(выводит принт содержимого enviroment).
+class DebugAplication(Aplication):
+    def __init__(self, routes, fronts):
+        self.aplication = Aplication(routes, fronts)
+        super().__init__(routes, fronts)
+
+    def __call__(self, environ, start_response):
+        print('Debug Aplication')
+        print(environ)
+        return self.aplication(environ, start_response)

@@ -1,15 +1,16 @@
-from view import Index, Obout, Contact, Programs, Category, Courses, CopyCourses, Users
-
-routes = {
-    '/': Index(),
-    '/obout/': Obout(),
-    '/contact/': Contact(),
-    '/programs/': Programs(),
-    '/category/': Category(),
-    '/courses/': Courses(),
-    '/copy-course/': CopyCourses(),
-    '/users/': Users(),
-}
+# from view import Index, Obout, Contact #, Programs, Category, Courses, CopyCourses, Users
+#
+#
+# routes = {
+#     '/': Index(),
+#     '/obout/': Obout(),
+#     '/contact/': Contact(),
+#     # '/programs/': Programs(),
+#     # '/category/': Category(),
+#     # '/courses/': Courses(),
+#     # '/copy-course/': CopyCourses(),
+#     # '/users/': Users(),
+# }
 
 
 def secret_front(request):

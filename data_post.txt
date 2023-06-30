@@ -213,3 +213,30 @@ news	fqw	fqwf
 {'name': 'Python', 'course_type': 'interactive'} 
 {'name': 'Валя', 'course_type': 'record'} 
 {'name': 'dima', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
+{'name': 'Python'} 
+{'name': 'Ира'} 
+{'name': 'Валя'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Ира'} 
+{'name': 'Java', 'course_type': 'record'} 
+{'name': 'Валя', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'python'} 
+{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'JavaScript'} 
+{'name': 'dima', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
+{'name': 'Python'} 
+{'name': 'Ира'} 
+{'name': 'Java'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'dima', 'course_type': 'record'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': ''} 
+{'name': 'Python'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
