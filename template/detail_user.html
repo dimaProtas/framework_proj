@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="profile_user">
+    <div>
+    <h1>Профиль</h1>
+    <p>Имя: {{ objects_name['user']['name'] }}</p>
+    <p>Фамилия: {{ objects_name['user']['last_name'] }}</p>
+    <p>День рождения: {{ objects_name['user']['birthdate'] }}</p>
+    <p>Email: {{ objects_name['user']['email'] }}</p>
+    <p>Статус: {% if objects_name['user_type'] == 'teacher'  %} Учитель {% else %} Студент {% endif %}</p>
+</div>
+    <div>
+    {% if objects_name['user_type'] == 'student'  %}
+        <h2>Курсы студента</h2>
+        <ul>
+            {% for course in objects_name['user']['courses'] %}
+            <li>{{ course.name }} (
+                {% if course.__class__.__name__ == 'Interactive' %}
+                    <span>online курс</span>
+                {% elif course.__class__.__name__ == 'Record' %}
+                    <span>запись курса</span>
+                {% endif %}
+                )</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+</div>
+    <a class="link_add_course" href="/add_student/">Записать студента на курс</a>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

@@ -1,242 +1,295 @@
 Имя                Email            Сообщение
 ------------------------------------------------
-dima	dima.new.protasevich92@gmail.com	new+message
-Roma	roma@mail.ru	Hello+world
-Valera	valera@mail.ru	I+am+Valera  
-Roma	dima.new.protasevich92@gmail.com  qwfqw
-
-news	fqw	fqwf  
-Ира	dima.new.protasevich92@gmail.com	Привет+как+дела?  
-Валя	dima.new.protasevich92@gmail.com	как+дела+у+вас?  
-Валя	dima.new.protasevich92@gmail.com	Что+ты+делаешь?  
-Валя	dima.new.protasevich92@gmail.com	как ты Валя?  
-Валодя	val@mail.ru	У валоди все отлично!  
-Валя	dima.new.protasevich92@gmail.com	Что нового у тебя валя?  
-Валя	dima.new.protasevich92@gmail.com	Что же ты не отвечаешь?  
-Ира	dima.new.protasevich92@gmail.com	Что то на русском.  
-{'name': 'Python'} 
-{'name': 'dima'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'dima'} 
-{'name': 'dima'} 
-{'name': ''} 
-{'name': 'Ира'} 
-{'name': 'Python'} 
-{'name': 'dima'} 
-{'name': 'Python'} 
-{'name': 'dima'} 
-{'name': ''} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': ''} 
-{'name': 'Валя'} 
-{'name': 'Валя'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': ''} 
-{'name': ''} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
+{'name': 'dima', 'lastname': 'Пупкина', 'birthdate': '0042-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'dima', 'lastname': 'Пупкина', 'birthdate': '0042-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'dima', 'lastname': 'Пупкина', 'birthdate': '2455-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'dima', 'lastname': 'Пупкина', 'birthdate': '2455-03-12', 'email': 'dima.new.protasevdwefefqich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0245-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0245-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0043-12-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0043-12-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Python', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Python', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Пупкина', 'birthdate': '0024-03-12', 'email': 'dima.new.profdgtasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Пупкина', 'birthdate': '0024-03-12', 'email': 'dima.new.profdgtasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0042-12-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Пупкина', 'birthdate': '0342-03-12', 'email': 'dima.new.protgsgsfsasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0034-12-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0034-12-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Пупкина', 'birthdate': '0041-12-12', 'email': 'dima.new.proывафвtasevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Python', 'lastname': 'Чери', 'birthdate': '0042-12-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0024-03-12', 'email': 'dima.new.protasfgdgsevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '1343-02-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Пупкина', 'birthdate': '2445-03-12', 'email': 'dima.new.protasfdsgfevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Валя', 'lastname': 'Пупкина', 'birthdate': '2445-03-12', 'email': 'dima.new.protasfdsgfevich92@gmail.com', 'type_user': 'teacher', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Python', 'lastname': 'Чери', 'birthdate': '0332-02-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
+{'name': 'Ира', 'lastname': 'Чери', 'birthdate': '0445-03-12', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'password': '123456', 'repid_password': '123456'} 
 {'name': 'Python'} 
 {'name': 'Java'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Валя'} 
-{'name': 'Python'} 
-{'name': 'Ира'} 
-{'name': 'Ира'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Java'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Валя'} 
-{'name': 'Java'} 
-{'name': 'news'} 
-{'name': 'Java'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'J'} 
-{'name': 'J'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'dima'} 
-{'name': 'Ира'} 
-{'name': 'Java'} 
-{'name': 'JavaScript'} 
-{'name': 'Java продвинутый'} 
-{'name': 'java для начинающих'} 
-{'name': 'С#'} 
-{'name': 'C# продвинутый'} 
-{'name': 'C# продвинутый'} 
-{'name': 'C# продвинутый'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Java'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': ''} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Ира'} 
-{'name': 'Python'} 
-{'name': ''} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'dima'} 
-{'name': 'Java'} 
-{'name': ''} 
-{'name': 'Java'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python для новичков', 'course_type': 'record'} 
+{'name': 'java для начинающих', 'course_type': 'record'} 
+{'name': 'java - основы', 'course_type': 'interactive'} 
 {'name': 'Python'} 
 {'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Java', 'course_type': 'interactive'} 
 {'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
 {'name': 'Python', 'course_type': 'record'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Java', 'course_type': 'record'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Java', 'course_type': 'record'} 
-{'name': 'Java', 'course_type': 'record'} 
+{'name': 'java для начинающих', 'course_type': 'interactive'} 
 {'name': 'Java'} 
-{'name': 'java - основы', 'course_type': 'record'} 
+{'name': 'JavaScript', 'course_type': 'record'} 
+{'name': 'java для начинающих', 'course_type': 'interactive'} 
 {'name': 'Python'} 
-{'name': 'Ира', 'lastname': 'Чери', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Python', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Python', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student'} 
-{'name': 'Валя', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher'} 
-{'name': 'Валя', 'last_name': 'Sidorov', 'email': 'valia@mail.ru', 'type_user': 'student'} 
-{'name': 'dima', 'last_name': 'protas', 'email': 'pro@mai.ru', 'type_user': 'teacher'} 
-{'name': 'pasha', 'last_name': 'lox', 'email': 'lox@mail.ru', 'type_user': 'student'} 
-{'name': 'Ира', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Ира', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'Валя', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Ира', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'Ира', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Валя', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'dima', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': ''} 
+{'name': 'Java'} 
+{'name': 'C#'} 
+{'name': 'Python для новичков', 'course_type': 'record'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'java - основы', 'course_type': 'interactive'} 
+{'name': 'java - основы', 'course_type': 'interactive'} 
+{'name': 'Java продвинутый', 'course_type': 'record'} 
+{'name': 'C# продвинутый', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python профи', 'course_type': 'record'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'course_name': 'Изменил курс', 'category': 'Python', 'type_user': 'Interactive', 'submit': ''} 
+{'course_name': 'Новый', 'category': 'Python', 'type_user': 'Record', 'submit': ''} 
+{'course_name': 'Новый', 'category': 'Python', 'type_user': 'Record', 'submit': ''} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': 'Python профи', 'course_type': 'record'} 
+{'course_name': 'Изменил', 'category': 'Java', 'type_user': 'Record', 'submit': ''} 
+{'course_name': 'Изменил', 'category': 'Java', 'type_user': 'Record', 'submit': ''} 
+{'name': 'Python'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'course_name': 'Новый', 'category': 'Python', 'type_user': 'Record', 'submit': ''} 
+{'course_name': 'NEw', 'category': 'Python', 'type_user': 'Record', 'submit': ''} 
+{'course_name': 'NEw', 'category': 'Python', 'type_user': 'Record', 'submit': ''} 
+{'course_name': 'NEw', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'New', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'New', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'Python', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': ''} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'course_name': 'Python для профи', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'Python', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'course_name': 'Python', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python для профи', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': ''} 
+{'name': 'Python'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_name': 'New', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_name': 'New', 'category': 'Python', 'type_user': 'Record'} 
+{'name': 'Python'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'course_name': 'New', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'New', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'Python', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_name': 'ыфвуа', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'ыфвуа', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'вуа', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'вуа', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'вуа', 'category': 'Python', 'type_user': 'Record'} 
+{'course_name': 'Pyt', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
 {'name': 'Python'} 
 {'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_name': 'Pytdqwd', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'Pytdqwd', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'Pytdqwdqwdqwd', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'Pytdqwdqwdqwd', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_name': 'Javadqwfqw', 'category': 'Python', 'type_user': 'Interactive'} 
 {'name': 'Python'} 
 {'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Java', 'course_type': 'record'} 
+{'course_name': 'Pythond qwffwq', 'category': 'Python', 'type_user': 'Interactive'} 
+{'name': 'Python'} 
 {'name': 'Python'} 
 {'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Java'} 
-{'name': 'Java'} 
+{'course_id': '0', 'course_name': 'Pytdwafqw', 'category': 'Python', 'type_user': 'Interactive'} 
 {'name': 'Java', 'course_type': 'interactive'} 
-{'name': 'dima', 'course_type': 'record'} 
+{'course_name': 'Javadwefqegw', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_id': '1', 'course_name': 'Javadqwdqf', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_id': '1', 'course_name': 'Javadqwdqf', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_id': '1', 'course_name': 'Javadwqewqf', 'category': 'Python', 'type_user': 'Record'} 
+{'course_id': '1', 'course_name': 'Javadwqfwef', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_id': '1', 'course_name': 'Javadwqfqw', 'category': 'Python', 'type_user': 'Interactive'} 
 {'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
 {'name': 'Python'} 
 {'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Javasdfawfew', 'category': 'Python', 'type_user': 'Interactive'} 
+{'course_id': '0', 'course_name': 'Javasdfawfew', 'category': 'Python', 'type_user': 'Interactive'} 
 {'name': 'Python'} 
+{'name': 'Python'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Java dfqwfeq', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '2', 'course_name': 'Python fefqwe', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '2', 'course_name': 'Python fefqwe', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '1', 'course_name': 'Javadqw q qw', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '1', 'course_name': 'Javaddwq d', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '2', 'course_name': 'New curses', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '2', 'course_name': 'New curses', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '2', 'course_name': 'New curses', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '2', 'course_name': 'New curses', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'Java обновленный', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '0', 'course_name': 'Java обновленный', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '0', 'course_name': 'Java обновленный', 'category': 'Python', 'type_user': 'record'} 
+{'name': 'Python'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'dima', 'course_type': 'interactive'} 
+{'course_id': '1', 'course_name': 'Python ', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '1', 'course_name': 'Python ', 'category': 'Python', 'type_user': 'record'} 
+{'name': 'Python'} 
+{'name': 'Валя', 'course_type': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python аывпыв', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python аывпыв', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Ира'} 
+{'name': 'Java вфйца', 'course_type': 'interactive'} 
+{'name': 'Java'} 
+{'name': 'Python'} 
+{'name': 'java - основы', 'course_type': 'interactive'} 
+{'name': 'Java продвинутый', 'course_type': 'record'} 
+{'name': 'Python для новичков', 'course_type': 'interactive'} 
+{'course_id': '2', 'course_name': 'new java', 'category': 'Java', 'type_user': 'record'} 
+{'course_id': '2', 'course_name': 'new java', 'category': 'Java', 'type_user': 'record'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python afaw', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'ffwwqfq', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python afaw dqwd', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'name': 'Java', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Java new', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'Java new', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '1', 'course_name': 'Python туц', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Python', 'type_user': 'record'} 
+{'name': 'Java'} 
+{'name': 'dima', 'course_type': 'interactive'} 
+{'course_id': '2', 'course_name': 'Java new', 'category': 'Java', 'type_user': 'record'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Java', 'type_user': 'record'} 
+{'course_id': '0', 'course_name': 'Python new', 'category': 'Java', 'type_user': 'record'} 
+{'course_id': '2', 'course_name': 'Java new', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '2', 'course_name': 'dima super puper', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '2', 'course_name': 'dima super puper', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '2', 'course_name': 'dima super puper', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'new java', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'new java', 'category': 'Java', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'new', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'new', 'category': 'Java', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'new java', 'category': 'Python', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'new', 'category': '<patterns.creational_patterns.Category object at 0x0000026EE30AE050>', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Java'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'вацу', 'category': '[<patterns.creational_patterns.Category object at 0x000002328931F250>, <patterns.creational_patterns.Category object at 0x000002328931E690>, <patterns.creational_patterns.Category object at 0x000002328931DFD0>]', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'вацу', 'category': '[<patterns.creational_patterns.Category object at 0x000002328931F250>, <patterns.creational_patterns.Category object at 0x000002328931E690>, <patterns.creational_patterns.Category object at 0x000002328931DFD0>]', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'вацу', 'category': '[<patterns.creational_patterns.Category object at 0x000002328931F250>, <patterns.creational_patterns.Category object at 0x000002328931E690>, <patterns.creational_patterns.Category object at 0x000002328931DFD0>]', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'вацу', 'category': '[<patterns.creational_patterns.Category object at 0x000002328931F250>, <patterns.creational_patterns.Category object at 0x000002328931E690>, <patterns.creational_patterns.Category object at 0x000002328931DFD0>]', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'вацу', 'category': '[<patterns.creational_patterns.Category object at 0x000002328931F250>, <patterns.creational_patterns.Category object at 0x000002328931E690>, <patterns.creational_patterns.Category object at 0x000002328931DFD0>]', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'вацу', 'category': '[<patterns.creational_patterns.Category object at 0x000002328931F250>, <patterns.creational_patterns.Category object at 0x000002328931E690>, <patterns.creational_patterns.Category object at 0x000002328931DFD0>]', 'type_user': 'interactive'} 
+{'name': 'Python'} 
+{'name': 'Java'} 
+{'name': 'Python', 'course_type': 'interactive'} 
+{'course_id': '0', 'course_name': 'авцу', 'category': 'Python', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'авцу', 'category': 'Java', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'авцу', 'category': 'Java', 'type_user': 'interactive'} 
+{'course_id': '0', 'course_name': 'JavaScript', 'category': 'Java', 'type_user': 'record'} 
+{'course_id': '0', 'course_name': 'sadfafaw', 'category': 'Java', 'type_user': 'record'} 
 {'name': 'Ира', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Python', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Java', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Python', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Ира', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'Ира'} 
-{'name': 'Java'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Валя', 'course_type': 'record'} 
-{'name': 'dima', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'Математика'} 
-{'name': 'Python'} 
-{'name': 'Ира'} 
-{'name': 'Валя'} 
-{'name': 'Python', 'course_type': 'interactive'} 
-{'name': 'Ира'} 
-{'name': 'Java', 'course_type': 'record'} 
-{'name': 'Валя', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'python'} 
-{'name': 'Ира', 'last_name': 'Petrov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': 'JavaScript'} 
-{'name': 'dima', 'last_name': 'protas', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'student', 'post': ''} 
-{'name': 'Python'} 
-{'name': 'Ира'} 
-{'name': 'Java'} 
-{'name': 'Java', 'course_type': 'interactive'} 
-{'name': 'dima', 'course_type': 'record'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
-{'name': 'Java'} 
-{'name': 'Python', 'last_name': 'Sidorov', 'email': 'dima.new.protasevich92@gmail.com', 'type_user': 'teacher', 'post': ''} 
-{'name': 'Python'} 
-{'name': 'Java', 'course_type': 'interactive'} 
-{'name': 'Python'} 
-{'name': 'Python'} 
+{'course_id': '1', 'course_name': 'Python основы', 'category': 'Python', 'type_user': 'record'} 
+{'course_id': '1', 'course_name': 'Python основы', 'category': 'Python', 'type_user': 'record'} 

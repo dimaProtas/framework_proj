@@ -26,7 +26,7 @@ class Debug:
             t = time.time()
             result = func(*args, **kwargs)
             te = time.time()
-            print(f'{self.name} time{te - t}')
+            print(f'Debug -> {self.name} ------ Время выполнения time{round((te - t), 2)} ------')
             return result
 
         return wrapper
@@ -40,7 +40,7 @@ class WeatherService(metaclass=abc.ABCMeta):
 
 class WeatherCurrencyService(WeatherService):
     def get_weather(self):
-        url = 'https://yandex.ru/pogoda/'
+        url = 'https://www.yandex.ru/pogoda/moscow?lat=55.755863&lon=37.6177'
         response = requests.get(url)
 
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -82,15 +82,15 @@ class ProxyWeatherService(WeatherCurrencyService):
     def __init__(self):
         self.currencyWeatherService = WeatherCurrencyService()
         self.rate = dict()
-        self.start_timer()
+        # self.start_timer()
 
-    def start_timer(self):
-        self.timer = threading.Timer(3 * 60 * 60, self.clear_rate)  # Запуск таймера каждые 3 часа
-        self.timer.start()
+    # def start_timer(self):
+    #     self.timer = threading.Timer(3 * 60 * 60, self.clear_rate)  # Запуск таймера каждые 3 часа
+    #     self.timer.start()
 
-    def clear_rate(self):
-        self.rate = {}  # Очистка словаря
-        self.start_timer()  # Запуск таймера для следующей очистки
+    # def clear_rate(self):
+    #     self.rate = {}  # Очистка словаря
+    #     self.start_timer()  # Запуск таймера для следующей очистки
 
     def get_weather(self):
         if not self.rate:
@@ -101,4 +101,3 @@ class ProxyWeatherService(WeatherCurrencyService):
 
 weather_data = ProxyWeatherService()
 weather = weather_data.get_weather()
-print(weather)
