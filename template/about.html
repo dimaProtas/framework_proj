@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'inc-menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <section class="blog-post-area">
+        <div class="container">
+            <div class="col-md-3">
+                        <div class="single-post">
+                            <h4><span><span class="author-name">{{object_list[0]['posted_by']}}</span></span></h4>
+                            <p>{{object_list[0]['text']}}</p>
+                        </div>
+                    </div>
+            <div class="row">
+                <div class="blog-post-area-style">
+                  <div id="content">
+        <!-- insert the page content here -->
+        <h1>Связаться с нами</h1>
+          <div class="form_settings">
+              <form method="POST" action="/">
+                <p><span>Имя</span><input class="contact" type="text" name="name" value="" /></p>
+                <p><span>Email</span><input class="contact" type="text" name="email" value="" /></p>
+                <p><span>Сообщение</span><textarea class="contact textarea" rows="8" cols="50" name="message"></textarea></p>
+                <p><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Отправить" /></p>
+              </form>
+          </div>
+      </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

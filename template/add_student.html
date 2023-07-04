@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Запись{% endblock %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block content %}
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <form method="post" style="text-align: center;">
+        <h1>Добавление студентов на курс</h1>
+        <select name="name_student" size="10" style="width: 300px;">
+            {% for student in objects_name['student'] %}
+                <option value="{{student.name}}" >{{student.name}} {{student.last_name}}</option>
+            {% endfor %}
+        </select>
+        <select name="name_course" size="10" style="width: 300px;">
+            {% for course in objects_name['course'] %}
+                <option value="{{course.name}}">{{course.name}} ({% if course.__class__.__name__ == 'Interactive' %}
+                    <span>online курс</span>
+                    {% elif course.__class__.__name__ == 'Record' %}
+                    <span>запись курса</span>
+                    {% endif %})</option>
+            {% endfor %}
+        </select>
+        <p><button class="add_form_button" type="submit">Записать</button></p>
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}
