@@ -31,6 +31,9 @@ class Aplication:
         elif method == 'GET':
             request['request_params'] = process_get_data(environ)
 
+        # elif method == 'DELETE':
+        #     request['request_params'] = process_delete_data(environ)
+
         for front in self.fronts:
             front(request)
         code, body = view(request)

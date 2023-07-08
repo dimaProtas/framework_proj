@@ -40,37 +40,40 @@ class WeatherService(metaclass=abc.ABCMeta):
 
 class WeatherCurrencyService(WeatherService):
     def get_weather(self):
-        url = 'https://www.yandex.ru/pogoda/moscow?lat=55.755863&lon=37.6177'
-        response = requests.get(url)
-
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        weather_element = soup.find('div', class_='title-icon__text')
-
-        if weather_element is not None:
-            weather_text = weather_element.get_text(strip=True)
-        else:
-            weather_text = 'Не удалось получить информацию о погоде'
-
-        # Обрезание описания погоды до точки
-        dot_index = weather_text.find('·')
-        if dot_index != -1:
-            weather_info = weather_text[:dot_index]
-        else:
-            weather_info = 'Не удалось получить информацию о погоде'
-
-        # Извлечение температуры с помощью регулярного выражения
-        temperature_range_match = re.search(r'(\+\d+⁠…⁠\+\d+⁠°)', weather_text)
-        if temperature_range_match:
-            temperature_range = temperature_range_match.group()
-        else:
-            temperature_range = 'Не удалось получить информацию о температуре'
-
-        # Извлечение скорости ветра
-        wind_speed = 'Не удалось получить информацию о ветре'
-        dots = weather_text.split('·')
-        if len(dots) >= 3:
-            wind_speed = '·'.join(dots[2:]).strip()
+        # url = 'https://www.yandex.ru/pogoda/moscow?lat=55.755863&lon=37.6177'
+        # response = requests.get(url)
+        #
+        # soup = BeautifulSoup(response.content, 'html.parser')
+        #
+        # weather_element = soup.find('div', class_='title-icon__text')
+        #
+        # if weather_element is not None:
+        #     weather_text = weather_element.get_text(strip=True)
+        # else:
+        #     weather_text = 'Не удалось получить информацию о погоде'
+        #
+        # # Обрезание описания погоды до точки
+        # dot_index = weather_text.find('·')
+        # if dot_index != -1:
+        #     weather_info = weather_text[:dot_index]
+        # else:
+        #     weather_info = 'Не удалось получить информацию о погоде'
+        #
+        # # Извлечение температуры с помощью регулярного выражения
+        # temperature_range_match = re.search(r'(\+\d+⁠…⁠\+\d+⁠°)', weather_text)
+        # if temperature_range_match:
+        #     temperature_range = temperature_range_match.group()
+        # else:
+        #     temperature_range = 'Не удалось получить информацию о температуре'
+        #
+        # # Извлечение скорости ветра
+        # wind_speed = 'Не удалось получить информацию о ветре'
+        # dots = weather_text.split('·')
+        # if len(dots) >= 3:
+        #     wind_speed = '·'.join(dots[2:]).strip()
+        temperature_range = 'qwfqwfqw'
+        weather_info = 'fwefwe'
+        wind_speed = 'fwegwe'
 
         weather = {'temperature_range': temperature_range, 'weather_info': weather_info, 'wind_speed': wind_speed}
 

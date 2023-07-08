@@ -14,19 +14,29 @@
         <br>
         <h1>Список курсов для категории {{name}}</h1>
         {% for item in object_list %}
-        <li>
-            {{item.name}} (
-            {% if item.__class__.__name__ == 'Interactive' %}
-                <span>online курс</span>
-            {% elif item.__class__.__name__ == 'Record' %}
-                <span>запись курса</span>
-            {% endif %}
-            ) <a href="/redact_course/?id={{item.id}}">редактировать</a>
-            <span><a href="/copy-course/?name={{item.name}}">
+    <li>
+        <div class="course-info">
+            <span>{{item.name}}</span>
+            <span>
+                {% if item.type_course == 'interactive' %}
+                    (online курс)
+                {% elif item.type_course == 'record' %}
+                    (запись курса)
+                {% endif %}
+            </span>
+            <a href="/redact_course/?id={{item.id}}">редактировать</a>
+            <a href="/copy-course/?name={{item.name}}">
                 <img width="15px" src="data:image/jpeg;base64,{{ image_data }}" alt="copy">
-            </a></span>
-        </li>
-        {% endfor %}
+            </a>
+        </div>
+        <div class="course-actions">
+            <form method="post" action="/courses/delete-course/">
+                <input type="hidden" name="course_id" value="{{ item.id }}">
+                <button type="submit" class="delete_button">Delete</button>
+            </form>
+        </div>
+    </li>
+{% endfor %}
     </div>
 
     <div>

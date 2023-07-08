@@ -12,6 +12,16 @@ def parse_input_data(data: str):
     return result
 
 
+# def process_delete_data(environ):
+#     query_string = environ.get('QUERY_STRING', '')
+#     query_data = parse_input_data(query_string)
+#     result = decode_value(query_data)
+#     print('Received DELETE data:', result)
+#     return result
+
+
+
+
 def process_get_data(environ):
     query_string = environ.get('QUERY_STRING', '')
     # query_data = parse_qs(query_string) # parse_qs так же можно использовать для парсинга post и get запросов

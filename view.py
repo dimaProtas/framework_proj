@@ -2,15 +2,18 @@ import base64
 import datetime
 
 from protasevich_framework.tempalator import render
-from patterns.creational_patterns import Engine, Logger, ProcessInputRegister
+from patterns.creational_patterns import Engine, Logger, ProcessInputRegister, MapperRegistry
 from patterns.structure_patterns import AppRoute, Debug, weather
 from patterns.behavioral_patterns import ListView, CreateView, SmsNotify, EmailNotify, BaseSerialazer
+from patterns.archi_sys_patterns import UnitOfWork
 
 site = Engine()
 registration = ProcessInputRegister()
 logger = Logger('main')
 sms_notify = SmsNotify()
 email_notify = EmailNotify()
+UnitOfWork.new_current()
+UnitOfWork.get_current().set_mapper_registry(MapperRegistry)
 
 routes = {}
 
@@ -102,12 +105,19 @@ class Category:
                 category = site.find_category_by_id(int(category_id))
             new_category = site.create_category(name, category)
             site.categories.append(new_category)
+            category_mapper = MapperRegistry.get_current_mapper('category')
+            categories = category_mapper.all()
             logger.log(f'Категории', f'POST-запрос (созданна новая категория) -> {name}')
-            return '200 OK', render('category.html', object_list=site.categories,
+            return '200 OK', render('category.html', object_list=categories,
                                     objects_name={'weather': weather, 'image_register': IMAGE_REGISTER})
         else:
             # Отображение списка категорий и формы для создания новой категории
-            return '200 OK', render('category.html', object_list=site.categories, create_category=True,
+            category_mapper = MapperRegistry.get_current_mapper('category')
+            categories = category_mapper.all()
+
+            for category in categories:
+                category.course_count = category.course_count(category_mapper)
+            return '200 OK', render('category.html', object_list=categories, create_category=True,
                                     objects_name={'weather': weather, 'image_register': IMAGE_REGISTER})
 
         # web = {'name': 'Web - разработка'}
@@ -134,25 +144,21 @@ class Courses:
             type_course = site.decode_value(type_course)
 
             if self.category_id != -1:
-                category = site.find_category_by_id(int(self.category_id))
-                course = site.create_course(type_course, name, category)
-                course.observer.append(sms_notify)
-                course.observer.append(email_notify)
-                site.courses.append(course)
-                logger.log(f'Курсы', f'POST-запрос (создан новый курс) -> {name}')
+                mapper_category = MapperRegistry.get_current_mapper('category')
+                category = mapper_category.find_by_id(self.category_id)
+                # Проверить, существует ли уже созданный курс в списке
+                mapper_course = MapperRegistry.get_current_mapper('course')
+                existing_course = mapper_course.find_course_by_name_and_category(name, self.category_id)
 
-                with open('template/img/copy.jpg', 'rb') as image_file:
-                    image_data = base64.b64encode(image_file.read()).decode('utf-8')
-
-            return '200 OK', render('courses.html', object_list=category.courses, name=category.name,
-                                    id=category.id, image_data=image_data,
-                                    objects_name={'weather': weather, 'image_register': IMAGE_REGISTER})
-
-        else:
-            try:
-                logger.log('Список курсов выбранной категории', '200 OK')
-                self.category_id = int(request['request_params']['id'])
-                category = site.find_category_by_id(int(self.category_id))
+                if existing_course:
+                    course = existing_course
+                else:
+                    course = site.create_course(type_course, name, category, self.category_id)
+                    site.courses.append(course)
+                    course.observer.append(sms_notify)
+                    course.observer.append(email_notify)
+                    site.courses.append(course)  # Добавить курс в список курсов
+                    logger.log(f'Курсы', f'POST-запрос (создан новый курс) -> {name}')
 
                 with open('template/img/copy.jpg', 'rb') as image_file:
                     image_data = base64.b64encode(image_file.read()).decode('utf-8')
@@ -160,8 +166,26 @@ class Courses:
                 return '200 OK', render('courses.html', object_list=category.courses, name=category.name,
                                         id=category.id, image_data=image_data,
                                         objects_name={'weather': weather, 'image_register': IMAGE_REGISTER})
+
+        else:
+            try:
+                logger.log('Список курсов выбранной категории', '200 OK')
+                self.category_id = int(request['request_params']['id'])
+                print(self.category_id)
+                mapper_category = MapperRegistry.get_current_mapper('category')
+                category = mapper_category.find_by_id(int(self.category_id))
+                mapper_course = MapperRegistry.get_current_mapper('course')
+                category_courses = mapper_course.all_courses_in_category(int(self.category_id))
+
+                with open('template/img/copy.jpg', 'rb') as image_file:
+                    image_data = base64.b64encode(image_file.read()).decode('utf-8')
+
+                return '200 OK', render('courses.html', object_list=category_courses, name=category.name,
+                                        id=category_courses, image_data=image_data,
+                                        objects_name={'weather': weather, 'image_register': IMAGE_REGISTER})
             except KeyError:
                 return '200 OK', 'No categories have been added yet'
+
 
 
 @AppRoute(routes=routes, url='/copy-course/')
@@ -196,8 +220,10 @@ class Users(ListView):
     @Debug('Users')
     def get_queryset(self):
         logger.log('Список пользователей', '200 OK')
-        student_list = site.student
-        teacher_list = site.teacher
+        mapper_student = MapperRegistry.get_current_mapper('student')
+        student_list = mapper_student.all()
+        mapper_teacher = MapperRegistry.get_current_mapper('teacher')
+        teacher_list = mapper_teacher.all()
         context = {
             'student_list': student_list,
             'teacher_list': teacher_list,
@@ -240,11 +266,13 @@ class DetailUser(ListView):
         try:
             if 'id_student' in request['request_params']:
                 student_id = int(request['request_params']['id_student'])
-                user = site.find_student_by_id(student_id)
+                mapper = MapperRegistry.get_current_mapper('student')
+                user = mapper.find_by_id(student_id)
                 user_type = 'student'
             elif 'id_teacher' in request['request_params']:
                 teacher_id = int(request['request_params']['id_teacher'])
-                user = site.find_teacher_by_id(teacher_id)
+                mapper = MapperRegistry.get_current_mapper('teacher')
+                user = mapper.find_by_id(teacher_id)
                 user_type = 'teacher'
             else:
                 return '200 OK', 'No user'
@@ -288,6 +316,8 @@ class RegisterUser(CreateView, ListView):
         registration.validate_input(password, repid_password, email)
 
         user = registration.create_users(type_user, name, lastname, birthdate_format, email, password)
+        user.mark_new()
+        UnitOfWork.get_current().commit()
         registration.send_confirmation_email(email)
         logger.log(f'POST-запрос -> Регистрация пользователя -> {name} {lastname}', '200 OK')
         if type_user == 'teacher':
@@ -340,25 +370,20 @@ class RedactCourse:
             data = request['data']
             id_course = site.decode_value(data['course_id'])
             name_course = site.decode_value(data['course_name'])
-            category_course = site.decode_value(data['category'])
+            category_id = site.decode_value(data['category'])
+            category_name = data.get('category_name')
             type_course = site.decode_value(data['type_user'])
-            site.redact_course(int(id_course), name_course, category_course, type_course)
+            site.redact_course(int(id_course), name_course, category_id, type_course)
             logger.log('RedactCourse', 'POST-запрос (изменены данные курса)')
-            course_id = int(id_course)
-            course = site.find_course_by_id(course_id)
-            category = site.categories
-            objects_name = {
-                'category': category,
-                'course': course,
-                'weather': weather,
-                'image_register': IMAGE_REGISTER,
-            }
 
-            return '200 OK', render('redact_course.html', objects_name=objects_name)
         try:
             course_id = int(request['request_params']['id'])
-            course = site.find_course_by_id(course_id)
-            category = site.categories
+            mapper_course = MapperRegistry.get_current_mapper('course')
+            print(course_id, "------------ДАННЫЕ РЕКВЕСТ ПАРАМС ID")
+            # Получите обновленную информацию о курсе из базы данных
+            course = mapper_course.find_by_id(course_id)
+            mapper_category = MapperRegistry.get_current_mapper('category')
+            category = mapper_category.all()
 
             context = {
                 'category': category,
@@ -372,5 +397,32 @@ class RedactCourse:
             return '200 OK', 'No course found'
 
 
+@AppRoute(routes=routes, url='/courses/delete-course/')
+class DeleteCourse:
+    @Debug('DeleteCourse')
+    def __call__(self, request):
+        if request['method'] == 'POST':
+            data = request['data']
+            course_id = data.get('course_id')
+            print(course_id)
+            if course_id is not None:
+                mapper_course = MapperRegistry.get_current_mapper('course')
+                mapper_course.delete(course_id)
+                return '200 OK', 'Course deleted'
+
+        return '400 Bad Request', 'Invalid request'
 
 
+@AppRoute(routes=routes, url='/category/delete-category/')
+class DeleteCategory:
+    def __call__(self, request):
+        if request['method'] == 'POST':
+            data = request['data']
+            category_id = data.get('category_id')
+            print(category_id)
+            if category_id is not None:
+                mapper_category = MapperRegistry.get_current_mapper('category')
+                mapper_category.delete(category_id)
+                return '200 OK', 'Category deleted'
+            else:
+                return '400 Bad Request', 'Invalid request'
