@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block content %}
+<form class="redact_course" method="POST">
+    <h1>Редактирование курса:</h1>
+    <span>id: <input type="numer" name="course_id" value="{{ objects_name['course']['id'] }}"></span>
+    <p>Курс: <input type="text" name="course_name" value="{{ objects_name['course']['name'] }}"></p>
+    <p>Категория:
+        <select class="category_select" name="category" required>
+            {% for category in objects_name['category'] %}
+                {% if category.name == objects_name['course']['category_id']['name'] %}
+                    <option value="{{ category.id }}" data-name="{{ category.name }}" selected>{{ category.name }}</option>
+                {% else %}
+                    <option value="{{ category.id }}" data-name="{{ category.name }}">{{ category.name }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    </p>
+    <input type="hidden" name="category_name" value="" id="category_name_input">
+    <p>Тип курса:
+        <select class="course_select" name="type_user" required>
+            {% if objects_name['course'].type_course == 'interactive' %}
+                <option value="interactive" selected>online курс</option>
+                <option value="record">запись курса</option>
+            {% elif objects_name['course'].type_course == 'record' %}
+                <option value="interactive">online курс</option>
+                <option value="record" selected>запись курса</option>
+            {% endif %}
+        </select>
+    </p>
+    <button class="submit" type="submit">Сохранить</button>
+</form>
+
+<script>
+    const categorySelect = document.querySelector('.category_select');
+    const categoryNameInput = document.querySelector('#category_name_input');
+
+    categorySelect.addEventListener('change', (event) => {
+        const selectedOption = event.target.selectedOptions[0];
+        const categoryName = selectedOption.dataset.name;
+        categoryNameInput.value = categoryName;
+    });
+</script>
+
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

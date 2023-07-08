@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'inc-menu.html' %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="form_register">
+            <h1>Регистрация пользователя</h1>
+              <form method="post">
+                <p><span>Имя</span><input class="contact" type="text" name="name" value="" /></p>
+                <p><span>Фамилия</span><input class="contact" type="text" name="lastname" value="" /></p>
+                <p><span>Дата рождения</span><input class="contact" type="date" name="birthdate" value="" /></p>
+                <p><span>Email</span><input class="contact" type="text" name="email" value="" /></p>
+                <span>Тип пользователя</span>
+                <select class="contact_select" name="type_user" required style="width: 70%;">
+                    <option value="teacher">Учитель</option>
+                    <option value="student">Студент</option>
+                  </select>
+                  <p><span>Пароль</span><input class="contact" type="password" name="password" value="" /></p>
+                  <p><span>Повторите пароль</span><input class="contact" type="password" name="repid_password" value="" /></p>
+                <p><button class="submit" type="submit">Зарегистрироваться</button></p>
+              </form>
+          </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

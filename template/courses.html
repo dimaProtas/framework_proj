@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'inc-menu.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="courses">
+    <div class="curses_block">
+        <br>
+        <h1>Список курсов для категории {{name}}</h1>
+        {% for item in object_list %}
+    <li>
+        <div class="course-info">
+            <span>{{item.name}}</span>
+            <span>
+                {% if item.type_course == 'interactive' %}
+                    (online курс)
+                {% elif item.type_course == 'record' %}
+                    (запись курса)
+                {% endif %}
+            </span>
+            <a href="/redact_course/?id={{item.id}}">редактировать</a>
+            <a href="/copy-course/?name={{item.name}}">
+                <img width="15px" src="data:image/jpeg;base64,{{ image_data }}" alt="copy">
+            </a>
+        </div>
+        <div class="course-actions">
+            <form method="post" action="/courses/delete-course/">
+                <input type="hidden" name="course_id" value="{{ item.id }}">
+                <button type="submit" class="delete_button">Delete</button>
+            </form>
+        </div>
+    </li>
+{% endfor %}
+    </div>
+
+    <div>
+        <form class="courses_form" method="post">
+            <h1>Создание курса для категории {{name}}</h1>
+            <input class="name_course" type="text" name="name" placeholder="Название">
+            <div>
+                <label>
+                    <input type="radio" name="course_type" value="interactive" checked>
+                    Interactive
+                </label>
+                <label>
+                    <input type="radio" name="course_type" value="record">
+                    Record
+                </label>
+            </div>
+            <button class="button_course" type="submit">Сохранить и обновить</button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

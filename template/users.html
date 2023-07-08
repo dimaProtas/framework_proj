@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block style%}
+    {% include 'inc-style.html' %}
+{% endblock %}
+
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="users">
+    <div>
+        <h1>Список учителей:</h1>
+        <ul>
+          {% for teacher in objects_name['teacher_list'] %}
+            <li>
+                <a href="/detail_user/?id_teacher={{teacher.id}}">{{ teacher.name }} {{ teacher.last_name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h1>Список студентов:</h1>
+        <ul>
+            {% for student in objects_name['student_list'] %}
+            <li><a href="/detail_user/?id_student={{student.id}}">{{ student.name }} {{ student.last_name }}</a> ({{ student.email }})</li>
+            {% endfor %}
+        </ul>
+</div>
+</div>
+        <a class="link_add_course" href="/add_student/">Записать студента на курс</a>
+{% endblock %}
+
+{% block footer %}
+    {% include 'inc-footer.html' %}
+{% endblock %}

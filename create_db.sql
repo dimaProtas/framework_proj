@@ -1,0 +1,26 @@
+
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+DROP TABLE IF EXISTS student;
+CREATE TABLE student (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name VARCHAR (32), last_name VARCHAR (32),
+birthdate, email, password);
+
+DROP TABLE IF EXISTS teacher;
+CREATE TABLE teacher (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name VARCHAR (32), last_name VARCHAR (32),
+birthdate, email, password VARCHAR (32));
+
+DROP TABLE IF EXISTS category;
+CREATE TABLE category (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name VARCHAR (32), category VARCHAR (100));
+
+DROP TABLE IF EXISTS course;
+CREATE TABLE course (
+    id INTEGER PRIMARY KEY NOT NULL UNIQUE,
+    name VARCHAR(100),
+    type_course VARCHAR(100),
+    category_id INTEGER,
+    FOREIGN KEY (category_id) REFERENCES category(id)
+);
+
+COMMIT TRANSACTION;
+PRAGMA foreign_keys = on;
